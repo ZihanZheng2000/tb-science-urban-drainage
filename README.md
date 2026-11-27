@@ -36,7 +36,7 @@ Native Windows verification passed all five pytest checks, including 48 independ
 
 Detailed results are in [authoring/validation.json](tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/authoring/validation.json), with the reference engineering note in [authoring/reference_result/design_report.md](tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/authoring/reference_result/design_report.md).
 
-Docker image builds, Harbor oracle/nop trials, and fresh agent difficulty trials remain unverified. Native checks do not establish container or artifact-transfer correctness.
+Docker builds and Harbor end-to-end validation passed on Ubuntu 24.04: **oracle reward 1**, **nop reward 0**, and **48/48 hydraulic cases**. Both trials recorded separate verification with no infrastructure exception. See the [successful workflow run](https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118) and [container validation record](tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/authoring/container_validation.json). The validated runtime source is commit `18ea25f6ef0c`. Fresh solving-agent difficulty trials remain pending.
 
 Harbor 0.27.0 loads the task successfully, and `harbor lint --json` returns no findings. Twenty selected official runtime and structure checks also pass. These checks exclude publication identity and proposal approval requirements.
 

@@ -1,0 +1,16 @@
+{
+  "capex_CU": 1226975.0,
+  "annual_maintenance_CU": 13000.0,
+  "maintenance_pv_CU": 193407.1731859217,
+  "lifecycle_CU": 1420382.1731859217,
+  "items": {
+    "chamber_J11": 390000.0,
+    "chamber_J10": 199200.0,
+    "chamber_J23": 195600.0,
+    "chamber_J29": 285375.0,
+    "pipe_C11": 12000,
+    "pipe_C31": 12000,
+    "pond_expansion": 114800,
+    "pond_control": 18000
+  }
+}

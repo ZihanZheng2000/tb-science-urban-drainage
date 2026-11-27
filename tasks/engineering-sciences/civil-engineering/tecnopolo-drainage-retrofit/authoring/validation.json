@@ -190,11 +190,9 @@
   ],
   "technical_static_checks": "author_materials/technical_static_checks.json",
   "not_executed": [
-    "Docker builds",
-    "Harbor oracle/nop artifact-transfer trials",
-    "Official shell checks (bash unavailable in PATH)",
     "Fresh Claude Code or Codex trials under 8-hour budget",
-    "LLM rubric review and failure trajectory analysis"
+    "LLM rubric review and failure trajectory analysis",
+    "Full publication identity/proposal checks; excluded by scope"
   ],
   "identity_fields": "Empty as requested; no credentials invented; needed only for publication review",
   "original_files": "106 original public/host/submission files match recorded source hashes; original versions not overwritten",
@@ -212,5 +210,14 @@
       "output": "OK 1 trial(s): binary reward, well-formed ctrf.json"
     }
   ],
-  "additional_validation_record": "authoring/container_validation.json"
+  "additional_validation_record": "authoring/container_validation.json",
+  "harbor_container_validation": {
+    "completed": true,
+    "report": "authoring/container_validation.json",
+    "run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
+    "source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
+    "oracle_reward": 1,
+    "nop_reward": 0,
+    "hydraulic_cases_passed": 48
+  }
 }

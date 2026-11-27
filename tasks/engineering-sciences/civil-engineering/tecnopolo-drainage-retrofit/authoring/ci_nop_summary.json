@@ -1,0 +1,20 @@
+{
+  "agent": "nop",
+  "expected_reward": 0,
+  "actual_reward": 0.0,
+  "separate_verifier": true,
+  "trial_exception": null,
+  "ctrf": {
+    "tests": 5,
+    "passed": 0,
+    "failed": 5,
+    "skipped": 0,
+    "pending": 0,
+    "other": 0,
+    "start": 1795756959.424049,
+    "stop": 1795756959.6214325
+  },
+  "hydraulic_cases_passed": null,
+  "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/nop/jobs/nop/tecnopolo-drainage-retrofit__KvAgC43",
+  "passed": true
+}
