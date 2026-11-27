@@ -64,7 +64,7 @@ The interpreter must provide the pinned scientific dependencies and verifier too
 
 ## Prior agent trial
 
-A previous version of the same drainage scenario was tested with Claude Code, identified by the user as **Claude Opus 5.5**. It passed **48/48 hydraulic cases**, with lifecycle cost **1,475,426.83 CU** and prediction P=0.998268. Its earlier overall score was **97.587/100**, below the old 98-point threshold, with the shortfall attributable to economics.
+A previous version of the same drainage scenario was tested with Claude Code, identified by the user as **Claude Opus 5.5**. The design **met the hydraulic engineering requirements, passing 48/48 cases**, with prediction P=0.998268. Its lifecycle cost was **1,475,426.83 CU**, compared with **1,420,382.17 CU** for the reference design: a feasible engineering solution with further scope to reduce cost.
 
 That version used a two-phase workflow and different scoring. This is a prior-variant reference, not a current-version failure or a measured frontier-model pass rate. The saved grader record does not include an exact model ID; the Opus 5.5 label is user-reported. See [the compact trial record](tasks/earth-sciences/geosciences/tecnopolo-drainage-retrofit/authoring/evidence/claude_opus_5_5_prior_variant.json).
 

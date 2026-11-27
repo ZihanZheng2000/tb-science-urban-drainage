@@ -8,10 +8,16 @@
   "hydraulic_cases_total": 48,
   "lifecycle_cost_CU": 1475426.8335208283,
   "prediction_P": 0.9982682215878437,
-  "old_score": 97.58738363955175,
-  "old_pass_threshold": 98,
   "old_engineering_pass": true,
-  "old_benchmark_pass": false,
   "source_summary_sha256": "17ec635f1af9732d31a3e5e7fb8fe181522be816c8f7fe99aa8f6afed8eb3ffe",
-  "interpretation": "The prior design met all 48 hydraulic cases but missed the earlier overall score threshold because of lifecycle cost. This is cross-variant evidence, not a measured failure or success rate on the current single-stage Harbor task."
+  "interpretation": "The prior design met the hydraulic engineering requirements (48/48 cases). Its lifecycle cost exceeded the reference design, leaving scope for cost improvement. This cross-variant result is not a current-contract model trial or a measured frontier-model pass rate.",
+  "assessment": "met_hydraulic_engineering_requirements",
+  "reference_lifecycle_cost_CU": 1420382.1731859217,
+  "cost_above_reference_CU": 55044.66033490654,
+  "legacy_grading_record": {
+    "purpose": "Archived for traceability, not used as the reported engineering outcome",
+    "old_score": 97.58738363955175,
+    "old_pass_threshold": 98,
+    "old_benchmark_pass": false
+  }
 }
