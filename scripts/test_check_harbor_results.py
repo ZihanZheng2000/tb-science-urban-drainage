@@ -38,6 +38,10 @@ class HarborResultChecks(unittest.TestCase):
             self.write_json(self.verifier / "stress_results.json",
                             [{"id": f"case_{i}", "violations": []} for i in range(48)])
             self.write_json(self.verifier / "costs.json", {"lifecycle_CU": 1_420_382.17})
+            self.write_json(self.verifier / "cost_evaluation.json", {
+                "eligible_for_cost_comparison": True, "cost_quality_passed": True,
+                "hydraulic_pass": True, "prediction_pass": True, "basis_pass": True,
+                "comparison_value_CU": 1_420_382.17, "lifecycle_CU": 1_420_382.17})
             self.write_json(self.verifier / "prediction.json",
                             {"observation_scale_rmse": [{"rmse_in_noise_sd": .5} for _ in range(12)]})
 
@@ -92,6 +96,15 @@ class HarborResultChecks(unittest.TestCase):
     def test_rejects_overriding_reward_json(self):
         self.prepare()
         self.write_json(self.verifier / "reward.json", {"reward": .5})
+        with self.assertRaises(AssertionError):
+            validate(self.job, 1, "oracle")
+
+    def test_rejects_ineligible_cost_comparison(self):
+        self.prepare()
+        path = self.verifier / "cost_evaluation.json"
+        result = json.loads(path.read_text())
+        result["eligible_for_cost_comparison"] = False
+        self.write_json(path, result)
         with self.assertRaises(AssertionError):
             validate(self.job, 1, "oracle")
 

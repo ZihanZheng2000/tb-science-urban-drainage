@@ -1,5 +1,5 @@
 {
-  "schema_version": "tb-science-1.0",
+  "schema_version": "tb-science-1.1",
   "engine": 52004,
   "parameter_bounds": {
     "roughness_mult": [
@@ -868,5 +868,5 @@
     "sampling": "Fixed 48-case draw. Four design single-storm cases are freshly cleaned with no fault (indices 4,8,16,20); all other age fractions are uniform [0,1]. Other continuous variables are uniform on scenario_support. Classes/sequences balanced by construction; every third case has one uniformly selected fault asset.",
     "fresh_cleaned_cases": 4
   },
-  "lifecycle_budget_CU": 1450000
+  "cost_objective": "Minimize 20-year discounted capital and maintenance cost among scientifically and hydraulically feasible designs."
 }

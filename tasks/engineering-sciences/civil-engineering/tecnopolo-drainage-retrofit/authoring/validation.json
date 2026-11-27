@@ -219,5 +219,7 @@
     "oracle_reward": 1,
     "nop_reward": 0,
     "hydraulic_cases_passed": 48
-  }
+  },
+  "current_contract": "tb-science-1.1",
+  "current_contract_container_validation": "pending"
 }

@@ -3,7 +3,7 @@
 
 # tecnopolo-drainage-retrofit
 
-Infer a drainage model from imperfect observations and design a cost-constrained retrofit for compound rainfall and tailwater stresses.
+Infer a drainage model from imperfect observations and design a low-cost retrofit for compound rainfall and tailwater stresses.
 
 | | |
 |---|---|
@@ -27,4 +27,4 @@ The executable reference derives annual maxima and Gumbel depths from the raw ar
 
 ## Verification
 
-A separate container receives exactly the three declared JSON artifacts. Pytest validates schemas, rainfall and network basis, recomputes discounted costs, checks independent prediction at the observation-noise scale for every event and sensor and reruns the installed design on the fixed independent operating cases. Physical maxima come from the native SWMM statistics; duration and recovery metrics use the prescribed output grid. Canonical simulator code and hidden fixtures are baked into the verifier, and no agent code is imported. Parameter inference is judged by predictive generalization rather than equality to latent parameters, and alternative admissible retrofit layouts can pass. The reward is binary and follows the complete pytest result. Native validation and the remaining container validation steps are recorded in authoring/README.md.
+A separate container receives exactly the three declared JSON artifacts. Pytest validates schemas, rainfall and network basis, checks independent prediction at the observation-noise scale for every event and sensor and reruns the installed design on the fixed independent operating cases. Lifecycle cost is compared only after the scientific and hydraulic requirements pass; cost-quality acceptance is private to the verifier. Physical maxima come from the native SWMM statistics; duration and recovery metrics use the prescribed output grid. Canonical simulator code and hidden fixtures are baked into the verifier, and no agent code is imported. Parameter inference is judged by predictive generalization rather than equality to latent parameters, and alternative admissible retrofit layouts can pass. The reward is binary and follows the complete pytest result. Native validation and the remaining container validation steps are recorded in authoring/README.md.

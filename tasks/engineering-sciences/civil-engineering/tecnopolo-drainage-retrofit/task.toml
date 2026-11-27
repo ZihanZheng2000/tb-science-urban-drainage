@@ -4,7 +4,7 @@ artifacts = ["/root/results/calibration.json", "/root/results/retrofit_design.js
 
 [task]
 name = "terminal-bench-science/tecnopolo-drainage-retrofit"
-description = "Infer a drainage model from imperfect observations and design a cost-constrained retrofit for compound rainfall and tailwater stresses."
+description = "Infer a drainage model from imperfect observations and design a low-cost retrofit for compound rainfall and tailwater stresses."
 authors = []
 keywords = ["urban-drainage", "hydrology", "inverse-problems", "robust-design", "swmm"]
 

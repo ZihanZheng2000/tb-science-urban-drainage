@@ -1,7 +1,7 @@
 {
   "environment/Dockerfile": "6184c92b1097b46f7d7a98e38bd5712fda47af8f42e30e6872db324dc64f953e",
-  "environment/input/benchmark/engineering_contract.md": "02793344b38958dac28beedb26d3a173e94d3a936a599fe7afc068d4823d0eae",
-  "environment/input/benchmark/spec.json": "53ec0072656b640e1c3af42a32f65b8912f3b40cd075ee431778c47b629ce381",
+  "environment/input/benchmark/engineering_contract.md": "4f7ef28bfb2d95a2dd0bea467ef19d3e6869cf855f6c6f4500cb3730f14dd423",
+  "environment/input/benchmark/spec.json": "6cdaeec20c3bf27959b565aa4556e9469f850e79a188b592d5c123abe768067d",
   "environment/input/benchmark/storm_method.json": "7b0618e70f2b48e86782cc021cd309ef9129445f100c1c146b75eb798d12122a",
   "environment/input/calibration/CAL_1_forcing.json": "9520e3415cb84676b7667904583deb3473c0d37bcb3042a93bd7163293465dfb",
   "environment/input/calibration/CAL_1_observations.csv": "c66a1311235a9b93d85442f9fa6ddfa31f8c6f0dcd74f5b2e03bd95540de2edc",
@@ -31,14 +31,16 @@
   "environment/input/data/survey/asbuilt_survey_2025.csv": "ed347ea177be4302dcad1c6b49cce3753f8111d6bcb775587dde4c98cb20a4aa",
   "tests/conftest.py": "413cbf7936cbdb2586db84bda3bff069f143fd4236b287f47c2dcc13872fb0ed",
   "tests/Dockerfile": "164c809201a75cc5ee332aa188ef0a11cd8bccdefbc1801973b7acaaaf1b9927",
+  "tests/economics.py": "72f65f7eeb9a724e919e8bdd754750516ec99d7c60e4e46790d4a7f8fafad8ae",
   "tests/test.sh": "a192725e2056966828ae844346306b2bb9461ac13da39584d914ae68087b6b16",
-  "tests/test_outputs.py": "7fb48030ab3156f0f2f6bc175dd2e8261dcc0e0bdb2736a388f382d7c98c93ed",
+  "tests/test_outputs.py": "6f251743c3274605bc2ba9750d16a30ab1a53c3a6a9713714c260d920fdf75ea",
+  "tests/private/cost_criteria.json": "5dcea204837465252543cf7403d7ff72b7a92d133c3d68f5434fc673ce0e48ab",
   "tests/private/existing_asset_state.json": "5b269dad80399579ca52d998f2b7e6b2371400d614fd9b31096192205b2f97d0",
   "tests/private/holdout_truth.json": "116c461f11c527425c841297144595f95b2ea8152e6179933c8331551d2c9982",
   "tests/private/idf.json": "668ed4fbf57450355dabe95f6927c01197c732e9f46f629b56e975d9609d05a2",
   "tests/private/stress_cases.json": "d23a50cf794b9404938b1d077f34de1861cc9532d34210255e98db49ec27c7c7",
   "tests/private/truth.json": "61d28481cbc97a4a30552f14daba20d665e64270db255e7a3b15f8d8ece94d1c",
-  "tests/canonical/benchmark/spec.json": "53ec0072656b640e1c3af42a32f65b8912f3b40cd075ee431778c47b629ce381",
+  "tests/canonical/benchmark/spec.json": "6cdaeec20c3bf27959b565aa4556e9469f850e79a188b592d5c123abe768067d",
   "tests/canonical/tools/hydraulics.py": "62a1f34b43bb0f3052c403af37bed343e82c747c8ad200b583743e70621fb20e",
   "tests/canonical/data/baseline/baseline_network.inp": "06cf04f91ae8b9edcbeea3d3f5231a4ee8668c33dbde74197c21603dc31b9afd"
 }

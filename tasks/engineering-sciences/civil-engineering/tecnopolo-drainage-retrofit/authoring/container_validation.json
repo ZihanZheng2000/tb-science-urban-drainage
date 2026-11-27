@@ -160,10 +160,10 @@
       "exit_code": 1
     }
   ],
-  "container_execution_verified": true,
+  "container_execution_verified": false,
   "ci_workflow": ".github/workflows/harbor-validation.yml",
   "repository": "https://github.com/ZihanZheng2000/tb-science-urban-drainage",
-  "ci_status": "passed",
+  "ci_status": "Revalidation pending for tb-science-1.1 feasibility-first economics",
   "ci_run_id": 45945268118,
   "ci_run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
   "validated_source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
@@ -220,5 +220,10 @@
     "authenticode": "Valid, Docker Inc",
     "required_windows_feature": "VirtualMachinePlatform",
     "next_step": "An administrator must enable WSL/VirtualMachinePlatform and restart Windows before the per-user installer can continue."
+  },
+  "previous_validated_contract": {
+    "run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
+    "source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
+    "public_budget": true
   }
 }

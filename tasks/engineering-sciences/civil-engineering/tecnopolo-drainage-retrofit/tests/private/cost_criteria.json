@@ -1,0 +1,5 @@
+{
+  "objective": "minimize_20_year_discounted_lifecycle_cost_subject_to_scientific_feasibility",
+  "maximum_accepted_lifecycle_CU": 1450000,
+  "comparison_tolerance_CU": 0.000001
+}

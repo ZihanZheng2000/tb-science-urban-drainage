@@ -19,6 +19,7 @@ import pytest
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "canonical/tools"))
 import hydraulics as hy
+from economics import evaluate_cost
 
 
 def load_json(path):
@@ -57,8 +58,9 @@ def test_output_contract(outputs):
     assert set(outputs) == {"calibration", "retrofit_design", "design_basis"}
 
 
-def test_rainfall_and_network_basis(outputs):
-    """Annual-maxima fit and adopted geometry reflect the supplied source evidence."""
+@pytest.fixture(scope="session")
+def verified_basis(outputs):
+    """Validate the rainfall and network basis once for both science and cost checks."""
     basis = outputs["design_basis"]
     assert set(basis) == {"retained_years", "durations_min", "depths_mm", "adopted_network"}
     years = basis["retained_years"]
@@ -83,17 +85,17 @@ def test_rainfall_and_network_basis(outputs):
                                 "C9_diameter_m": 0.4}.items():
         assert hy.finite(network[key]) and abs(network[key] - expected_value) <= 1e-6
     assert network["EDF4_outlet"] == "J10"
+    return True
 
 
-def test_lifecycle_budget(outputs, diagnostics_dir):
-    """Discounted capital and maintenance satisfy the owner's explicit budget."""
-    costs = hy.cost(outputs["retrofit_design"])
-    (diagnostics_dir / "costs.json").write_text(json.dumps(costs, indent=2))
-    assert costs["lifecycle_CU"] <= hy.SPEC["lifecycle_budget_CU"] + 1e-6, costs
+def test_rainfall_and_network_basis(verified_basis):
+    """Annual-maxima fit and adopted geometry reflect the supplied source evidence."""
+    assert verified_basis
 
 
-def test_independent_prediction(outputs, diagnostics_dir):
-    """Inferred parameters predict six sensor trajectories on two unseen events."""
+@pytest.fixture(scope="session")
+def prediction_result(outputs, diagnostics_dir):
+    """Compute independent predictive accuracy once, before economic comparison."""
     state = load_json(HERE / "private/existing_asset_state.json")
     cases = load_json(HERE / "private/holdout_truth.json")
     losses = []
@@ -122,14 +124,20 @@ def test_independent_prediction(outputs, diagnostics_dir):
                                             "rmse": math.sqrt(mse),
                                             "rmse_in_noise_sd": math.sqrt(mse) / observation_sd})
     normalized_rmse = math.sqrt(float(np.mean(losses)))
-    (diagnostics_dir / "prediction.json").write_text(json.dumps({
+    result = {
         "normalized_rmse": normalized_rmse, "per_event_sensor_mse": losses,
-        "observation_scale_rmse": observation_scale_rmse}, indent=2))
+        "observation_scale_rmse": observation_scale_rmse}
+    (diagnostics_dir / "prediction.json").write_text(json.dumps(result, indent=2))
     # The disclosed sensor noise supplies an independent scientific scale. Require
     # every event/sensor to predict within two noise SD; accurate channels cannot
     # dilute a poor pond recession through an aggregate score.
     failures = [row for row in observation_scale_rmse if row["rmse_in_noise_sd"] > 2.]
-    assert not failures, f"Insufficient event/sensor predictive accuracy: {failures}"
+    return {"diagnostics": result, "failures": failures, "passed": not failures}
+
+
+def test_independent_prediction(prediction_result):
+    """Inferred parameters predict six sensor trajectories on two unseen events."""
+    assert prediction_result["passed"], prediction_result["failures"]
 
 
 def simulate_case(payload):
@@ -158,3 +166,20 @@ def test_operating_cases(stress_results):
     failures = [{"id": case["id"], "violations": case["violations"]}
                 for case in stress_results if case["violations"]]
     assert not failures, failures
+
+
+def test_lifecycle_cost_quality(outputs, diagnostics_dir, verified_basis, prediction_result, stress_results):
+    """Only scientifically feasible designs enter the lifecycle-cost comparison."""
+    costs = hy.cost(outputs["retrofit_design"])
+    criteria = load_json(HERE / "private/cost_criteria.json")
+    report = evaluate_cost(
+        costs,
+        hydraulic_pass=len(stress_results) == 48 and all(not case["violations"] for case in stress_results),
+        prediction_pass=prediction_result["passed"],
+        basis_pass=verified_basis,
+        criteria=criteria,
+    )
+    (diagnostics_dir / "costs.json").write_text(json.dumps(costs, indent=2))
+    (diagnostics_dir / "cost_evaluation.json").write_text(json.dumps(report, indent=2))
+    assert report["eligible_for_cost_comparison"], "Scientific feasibility is required before economic comparison"
+    assert report["cost_quality_passed"], "Feasible design has insufficient lifecycle-cost efficiency"

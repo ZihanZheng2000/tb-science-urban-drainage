@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse
 import json
+import math
 
 
 def load(path):
@@ -41,7 +42,13 @@ def validate(job_dir, expected_reward, agent):
         assert len(operating_cases) == 48
         assert len({case["id"] for case in operating_cases}) == 48
         assert all(not case["violations"] for case in operating_cases)
-        assert load(verifier_dir / "costs.json")["lifecycle_CU"] <= 1_450_000
+        costs = load(verifier_dir / "costs.json")
+        economy = load(verifier_dir / "cost_evaluation.json")
+        assert math.isfinite(costs["lifecycle_CU"]) and costs["lifecycle_CU"] > 0
+        assert economy["eligible_for_cost_comparison"] is True
+        assert economy["cost_quality_passed"] is True
+        assert economy["hydraulic_pass"] and economy["prediction_pass"] and economy["basis_pass"]
+        assert economy["comparison_value_CU"] == costs["lifecycle_CU"] == economy["lifecycle_CU"]
         prediction = load(verifier_dir / "prediction.json")
         assert len(prediction["observation_scale_rmse"]) == 12
         assert all(row["rmse_in_noise_sd"] <= 2 for row in prediction["observation_scale_rmse"])
