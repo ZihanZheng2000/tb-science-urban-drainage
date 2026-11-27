@@ -214,12 +214,13 @@
   "harbor_container_validation": {
     "completed": true,
     "report": "authoring/container_validation.json",
-    "run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
-    "source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
+    "run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45955858993",
+    "source_commit": "178d151ac7cdd8e35b761cf05dd4ba63db1b8629",
     "oracle_reward": 1,
     "nop_reward": 0,
-    "hydraulic_cases_passed": 48
+    "hydraulic_cases_passed": 48,
+    "feasibility_first_cost_evaluation": true
   },
   "current_contract": "tb-science-1.1",
-  "current_contract_container_validation": "pending"
+  "current_contract_container_validation": "passed"
 }

@@ -11,52 +11,52 @@
             "skipped": 0,
             "pending": 0,
             "other": 0,
-            "start": 1795757351.2381277,
-            "stop": 1795757604.817773
+            "start": 1795763255.843077,
+            "stop": 1795763356.220019
         },
         "tests": [
             {
                 "name": "test_outputs.py::test_output_contract",
                 "status": "passed",
-                "duration": 0.0027766260000134935,
-                "start": 1795757351.3864992,
-                "stop": 1795757351.3895102,
+                "duration": 0.0017434389999948507,
+                "start": 1795763255.9373717,
+                "stop": 1795763255.939276,
                 "retries": 0,
                 "file_path": "test_outputs.py"
             },
             {
                 "name": "test_outputs.py::test_rainfall_and_network_basis",
                 "status": "passed",
-                "duration": 0.004579993999982435,
-                "start": 1795757351.3896954,
-                "stop": 1795757351.3944247,
-                "retries": 0,
-                "file_path": "test_outputs.py"
-            },
-            {
-                "name": "test_outputs.py::test_lifecycle_budget",
-                "status": "passed",
-                "duration": 0.0012278219999188877,
-                "start": 1795757351.3946004,
-                "stop": 1795757351.3959565,
+                "duration": 0.0027352550000045994,
+                "start": 1795763255.939394,
+                "stop": 1795763255.9422238,
                 "retries": 0,
                 "file_path": "test_outputs.py"
             },
             {
                 "name": "test_outputs.py::test_independent_prediction",
                 "status": "passed",
-                "duration": 11.856513517000053,
-                "start": 1795757351.396135,
-                "stop": 1795757363.252865,
+                "duration": 6.794207239000002,
+                "start": 1795763255.9423323,
+                "stop": 1795763262.736701,
                 "retries": 0,
                 "file_path": "test_outputs.py"
             },
             {
                 "name": "test_outputs.py::test_operating_cases",
                 "status": "passed",
-                "duration": 241.56383015899996,
-                "start": 1795757363.2531486,
-                "stop": 1795757604.817325,
+                "duration": 93.48124457400007,
+                "start": 1795763262.7368722,
+                "stop": 1795763356.218363,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_lifecycle_cost_quality",
+                "status": "passed",
+                "duration": 0.0009741000000076383,
+                "start": 1795763356.218643,
+                "stop": 1795763356.2197287,
                 "retries": 0,
                 "file_path": "test_outputs.py"
             }

@@ -1,0 +1,10 @@
+{
+  "objective": "minimize_20_year_discounted_lifecycle_cost_subject_to_scientific_feasibility",
+  "hydraulic_pass": true,
+  "prediction_pass": true,
+  "basis_pass": true,
+  "eligible_for_cost_comparison": true,
+  "lifecycle_CU": 1420382.1731859217,
+  "comparison_value_CU": 1420382.1731859217,
+  "cost_quality_passed": true
+}

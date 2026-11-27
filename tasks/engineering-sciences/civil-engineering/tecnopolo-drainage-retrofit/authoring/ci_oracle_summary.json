@@ -11,10 +11,10 @@
     "skipped": 0,
     "pending": 0,
     "other": 0,
-    "start": 1795757351.2381277,
-    "stop": 1795757604.817773
+    "start": 1795763255.843077,
+    "stop": 1795763356.220019
   },
   "hydraulic_cases_passed": 48,
-  "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/oracle/jobs/oracle/tecnopolo-drainage-retrofit__ZgdpepJ",
+  "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/oracle/jobs/oracle/tecnopolo-drainage-retrofit__7XHgfiY",
   "passed": true
 }

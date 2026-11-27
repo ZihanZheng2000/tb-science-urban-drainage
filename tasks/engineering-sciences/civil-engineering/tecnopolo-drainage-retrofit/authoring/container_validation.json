@@ -142,9 +142,9 @@
     "exit_code": 0
   },
   "result_checker_unit_tests": {
-    "passed": 8,
-    "total": 8,
-    "evidence_type": "synthetic parser fixtures, not container runs"
+    "passed": 15,
+    "total": 15,
+    "evidence_type": "synthetic checker and feasibility-first economics fixtures"
   },
   "local_container_attempts": [
     {
@@ -160,13 +160,13 @@
       "exit_code": 1
     }
   ],
-  "container_execution_verified": false,
+  "container_execution_verified": true,
   "ci_workflow": ".github/workflows/harbor-validation.yml",
   "repository": "https://github.com/ZihanZheng2000/tb-science-urban-drainage",
-  "ci_status": "Revalidation pending for tb-science-1.1 feasibility-first economics",
-  "ci_run_id": 45945268118,
-  "ci_run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
-  "validated_source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
+  "ci_status": "passed",
+  "ci_run_id": 45955858993,
+  "ci_run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45955858993",
+  "validated_source_commit": "178d151ac7cdd8e35b761cf05dd4ba63db1b8629",
   "agent_and_verifier_images_built": true,
   "runner": "Ubuntu 24.04, two CPUs",
   "oracle": {
@@ -182,11 +182,11 @@
       "skipped": 0,
       "pending": 0,
       "other": 0,
-      "start": 1795757351.2381277,
-      "stop": 1795757604.817773
+      "start": 1795763255.843077,
+      "stop": 1795763356.220019
     },
     "hydraulic_cases_passed": 48,
-    "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/oracle/jobs/oracle/tecnopolo-drainage-retrofit__ZgdpepJ",
+    "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/oracle/jobs/oracle/tecnopolo-drainage-retrofit__7XHgfiY",
     "passed": true
   },
   "nop": {
@@ -202,11 +202,11 @@
       "skipped": 0,
       "pending": 0,
       "other": 0,
-      "start": 1795756959.424049,
-      "stop": 1795756959.6214325
+      "start": 1795763104.0011563,
+      "stop": 1795763104.1315458
     },
     "hydraulic_cases_passed": null,
-    "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/nop/jobs/nop/tecnopolo-drainage-retrofit__KvAgC43",
+    "trial": "/home/runner/work/tb-science-urban-drainage/tb-science-urban-drainage/validation/nop/jobs/nop/tecnopolo-drainage-retrofit__SP36jtt",
     "passed": true
   },
   "initial_ci_failure": {
@@ -225,5 +225,16 @@
     "run_url": "https://github.com/ZihanZheng2000/tb-science-urban-drainage/actions/runs/45945268118",
     "source_commit": "18ea25f6ef0c51d9180974f0be7933a56b834ff3",
     "public_budget": true
+  },
+  "contract": "tb-science-1.1",
+  "economic_evaluation": {
+    "objective": "minimize_20_year_discounted_lifecycle_cost_subject_to_scientific_feasibility",
+    "hydraulic_pass": true,
+    "prediction_pass": true,
+    "basis_pass": true,
+    "eligible_for_cost_comparison": true,
+    "lifecycle_CU": 1420382.1731859217,
+    "comparison_value_CU": 1420382.1731859217,
+    "cost_quality_passed": true
   }
 }
