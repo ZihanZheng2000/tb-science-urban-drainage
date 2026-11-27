@@ -1,0 +1,872 @@
+{
+  "schema_version": "tb-science-1.0",
+  "engine": 52004,
+  "parameter_bounds": {
+    "roughness_mult": [
+      0.9,
+      1.5
+    ],
+    "horton_min_mult": [
+      0.6,
+      1.4
+    ],
+    "pond_ksat_mm_h": [
+      3.0,
+      15.0
+    ]
+  },
+  "allowed": {
+    "schema_version": "1.0",
+    "baseline_model": "data/baseline/baseline_network.inp",
+    "rules": {
+      "pipe_catalogue_m": [
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "throttle_catalogue_m": [
+        0.1,
+        0.125,
+        0.15,
+        0.2,
+        0.25
+      ],
+      "min_cover_m": 0.5,
+      "no_downsizing": "A conduit diameter may only be increased, except a designated throttle conduit, which may be reduced to a throttle size ONLY if the storage chamber at its upstream node is installed.",
+      "downstream_non_decreasing": "For every non-throttle circular conduit, its diameter must be >= the diameter of every non-throttle circular conduit entering its upstream node.",
+      "storage": "Gross plan area is the catalogue decision. Hydraulic active area is gross area*(1-min(0.15,0.004*network_age_months)); invert/rim stay fixed. Ponding above rim uses fixed mapped surface area.",
+      "fixed": "Only the declared design fields, calibrated parameters and documented scenario transformations may vary. The supplied hydraulics.py defines the numerical implementation."
+    },
+    "conduits": [
+      {
+        "id": "C5",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J5",
+        "to_node": "J6",
+        "length_m": 31.95,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C6",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J6",
+        "to_node": "J10",
+        "length_m": 35.74,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.93,
+        "required": false
+      },
+      {
+        "id": "C7",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J7",
+        "to_node": "J8",
+        "length_m": 42.07,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C8",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J8",
+        "to_node": "J9",
+        "length_m": 35.93,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.97,
+        "required": false
+      },
+      {
+        "id": "C9",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J9",
+        "to_node": "J10",
+        "length_m": 16.62,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.5,
+        "upsizing_options_m": [
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.31,
+        "required": false
+      },
+      {
+        "id": "C10",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J10",
+        "to_node": "J11",
+        "length_m": 30.52,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.5,
+        "upsizing_options_m": [
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.38,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "J10"
+      },
+      {
+        "id": "C13",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J12",
+        "to_node": "J13",
+        "length_m": 28.39,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C14",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J13",
+        "to_node": "J14",
+        "length_m": 8.67,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.91,
+        "required": false
+      },
+      {
+        "id": "C15",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J14",
+        "to_node": "J15",
+        "length_m": 27.3,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.95,
+        "required": false
+      },
+      {
+        "id": "C16",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J15",
+        "to_node": "J25",
+        "length_m": 54.85,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.4,
+        "upsizing_options_m": [
+          0.5,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.16,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "J15"
+      },
+      {
+        "id": "C17",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J16",
+        "to_node": "J17",
+        "length_m": 26.45,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C18",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J17",
+        "to_node": "J24",
+        "length_m": 19.47,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.91,
+        "required": false
+      },
+      {
+        "id": "C19",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J18",
+        "to_node": "J19",
+        "length_m": 40.88,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C20",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J19",
+        "to_node": "J20",
+        "length_m": 33.95,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.96,
+        "required": false
+      },
+      {
+        "id": "C21",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J20",
+        "to_node": "J23",
+        "length_m": 36.06,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.1,
+        "required": false
+      },
+      {
+        "id": "C22",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J21",
+        "to_node": "J22",
+        "length_m": 20.55,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.8,
+        "required": false
+      },
+      {
+        "id": "C23",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J22",
+        "to_node": "J23",
+        "length_m": 9.02,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.3,
+        "upsizing_options_m": [
+          0.4,
+          0.5,
+          0.6,
+          0.8
+        ],
+        "max_diameter_by_cover_m": 0.88,
+        "required": false
+      },
+      {
+        "id": "C24",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J23",
+        "to_node": "J24",
+        "length_m": 22.22,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.4,
+        "upsizing_options_m": [
+          0.5,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.34,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "J23"
+      },
+      {
+        "id": "C25",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J24",
+        "to_node": "VPP",
+        "length_m": 4.01,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.5,
+        "upsizing_options_m": [
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.53,
+        "required": false
+      },
+      {
+        "id": "C26",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "VPP",
+        "to_node": "J25",
+        "length_m": 22.87,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.5,
+        "upsizing_options_m": [
+          0.6,
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.55,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "VPP"
+      },
+      {
+        "id": "C27",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J25",
+        "to_node": "J25B",
+        "length_m": 24.95,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.74,
+        "required": false
+      },
+      {
+        "id": "C28",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J25B",
+        "to_node": "J26",
+        "length_m": 24.2,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.84,
+        "required": false
+      },
+      {
+        "id": "C29",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J26",
+        "to_node": "J29",
+        "length_m": 20.8,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.94,
+        "required": false
+      },
+      {
+        "id": "C30",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J28",
+        "to_node": "J29",
+        "length_m": 19.53,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.2,
+        "upsizing_options_m": [
+          0.25,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "max_diameter_by_cover_m": 0.7,
+        "required": false
+      },
+      {
+        "id": "C31",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J29",
+        "to_node": "J30",
+        "length_m": 9.29,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 2.02,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "J29"
+      },
+      {
+        "id": "C32",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J30",
+        "to_node": "OU2",
+        "length_m": 7.5,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 2.06,
+        "required": false
+      },
+      {
+        "id": "C11",
+        "type": "conduit",
+        "parameter": "XSECTIONS.Geom1 (circular internal diameter)",
+        "units": "m",
+        "from_node": "J11",
+        "to_node": "OUT_0",
+        "length_m": 10.7,
+        "roughness_n": 0.011,
+        "original_diameter_m": 0.6,
+        "upsizing_options_m": [
+          0.8,
+          1.0
+        ],
+        "max_diameter_by_cover_m": 1.6,
+        "required": false,
+        "throttle_options_m": [
+          0.1,
+          0.125,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "throttle_for_storage_site": "J11"
+      }
+    ],
+    "storage_sites": [
+      {
+        "id": "VPP",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 27.95,
+        "chamber_depth_m": 2.05,
+        "rim_elevation_m": 30.0,
+        "area_options_m2": [
+          50,
+          75,
+          100,
+          150,
+          200,
+          250,
+          300,
+          400
+        ],
+        "max_area_m2": 400,
+        "outlet_conduit": "C26",
+        "site_note": "Existing first-flush basin plot ('VPP' = vasca di prima pioggia) on the main OU2 trunk",
+        "required": false
+      },
+      {
+        "id": "J23",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 28.16,
+        "chamber_depth_m": 1.84,
+        "rim_elevation_m": 30.0,
+        "area_options_m2": [
+          50,
+          75,
+          100,
+          150,
+          200,
+          250
+        ],
+        "max_area_m2": 250,
+        "outlet_conduit": "C24",
+        "site_note": "Car-park strip on the J18-J23 lateral",
+        "required": false
+      },
+      {
+        "id": "J15",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 28.34,
+        "chamber_depth_m": 1.66,
+        "rim_elevation_m": 30.0,
+        "area_options_m2": [
+          50,
+          75,
+          100,
+          150,
+          200
+        ],
+        "max_area_m2": 200,
+        "outlet_conduit": "C16",
+        "site_note": "Landscaped verge on the J12-J15 lateral",
+        "required": false
+      },
+      {
+        "id": "J29",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 27.48,
+        "chamber_depth_m": 2.27,
+        "rim_elevation_m": 29.75,
+        "area_options_m2": [
+          50,
+          75,
+          100,
+          150,
+          200,
+          250,
+          300
+        ],
+        "max_area_m2": 300,
+        "outlet_conduit": "C31",
+        "site_note": "Plot next to the OU2 outfall; limited by the access road",
+        "required": false
+      },
+      {
+        "id": "J10",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 28.12,
+        "chamber_depth_m": 1.88,
+        "rim_elevation_m": 30.0,
+        "area_options_m2": [
+          50,
+          75,
+          100,
+          150,
+          200,
+          250
+        ],
+        "max_area_m2": 250,
+        "outlet_conduit": "C10",
+        "site_note": "Courtyard on the J5-J10 piped branch to OUT_0",
+        "required": false
+      },
+      {
+        "id": "J11",
+        "type": "storage_site",
+        "parameter": "convert junction to STORAGE (FUNCTIONAL, constant plan area)",
+        "units": "m2",
+        "invert_m": 27.9,
+        "chamber_depth_m": 2.0,
+        "rim_elevation_m": 29.9,
+        "area_options_m2": [
+          100,
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450
+        ],
+        "max_area_m2": 450,
+        "outlet_conduit": "C11",
+        "site_note": "Open ground next to the OUT_0 outfall, receives channel + pipes",
+        "required": false
+      }
+    ],
+    "pond_area_options_m2": [
+      180,
+      300,
+      450,
+      600,
+      800,
+      1000
+    ],
+    "pond_outlet_options_m": [
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2
+    ]
+  },
+  "costs": {
+    "chamber_fixed": 30000,
+    "chamber_m3": 450,
+    "throttle_each": 12000,
+    "pipe_per_m": {
+      "0.2": 340,
+      "0.25": 380,
+      "0.3": 420,
+      "0.4": 520,
+      "0.5": 640,
+      "0.6": 780,
+      "0.8": 1080,
+      "1.0": 1420
+    },
+    "pond_expansion_m2": 140,
+    "pond_control_each": 18000,
+    "inspection_per_chamber": 600,
+    "clean_per_throttle": 1200,
+    "pond_clean_fixed": 900,
+    "pond_clean_m2": 0.8,
+    "years": 20,
+    "discount_rate": 0.03
+  },
+  "limits": {},
+  "scenario_support": {
+    "duration_min": [
+      15,
+      360,
+      5
+    ],
+    "peak_fraction": [
+      0.3,
+      0.7
+    ],
+    "climate_depth_factor": [
+      1.0,
+      1.2
+    ],
+    "initial_pond_depth_m": [
+      0.05,
+      0.6
+    ],
+    "network_age_fraction": [
+      0.0,
+      1.0
+    ],
+    "pond_age_fraction": [
+      0.0,
+      1.0
+    ],
+    "infiltration_factor": [
+      0.45,
+      1.0
+    ],
+    "roughness_event_factor": [
+      0.95,
+      1.1
+    ],
+    "river_base_m": 26.65,
+    "river_peak_m": [
+      27.2,
+      28.65
+    ],
+    "sequence_gap_hours": [
+      6,
+      12,
+      24
+    ],
+    "predecessor_main_depth_ratio": [
+      0.4,
+      0.65
+    ],
+    "extra_blockage_fraction": [
+      0.15,
+      0.35
+    ],
+    "failure_assets": [
+      "C11",
+      "C31",
+      "POND_OUT"
+    ]
+  },
+  "metric_contract": {
+    "duration_grid_seconds": 15,
+    "native_maxima": [
+      "node_depth",
+      "link_flow"
+    ],
+    "recovery_hours_after_last_rain": 24,
+    "simulation_hours_after_last_rain": 48,
+    "design": {
+      "pipe_freeboard_m": 0.3,
+      "channel_freeboard_m": 0.15,
+      "C11_peak_cms": 0.0473,
+      "C32_peak_cms": 0.0274,
+      "pond_max_depth_m": 1.9,
+      "pond_spill_m3": 0.05,
+      "upstream_stored_24h_m3": 30,
+      "pond_depth_24h_m": 0.25,
+      "river_peak_cms": 0.055
+    },
+    "exceedance": {
+      "pond_spill_m3": 20,
+      "surface_peak_m3_15s": 60,
+      "J12_depth_m": 0.02,
+      "J12_seconds_above_0_01m": 120,
+      "J21_depth_m": 0.15,
+      "J21_seconds_above_0_05m": 900,
+      "river_peak_cms": 0.09
+    },
+    "all": {
+      "max_abs_continuity_pct": 2
+    }
+  },
+  "scenario_sampling": {
+    "private_case_count": 48,
+    "design_cases": 24,
+    "exceedance_cases": 24,
+    "single_event_cases": 24,
+    "sequence_cases": 24,
+    "fault_cases": 16,
+    "sampling": "Fixed 48-case draw. Four design single-storm cases are freshly cleaned with no fault (indices 4,8,16,20); all other age fractions are uniform [0,1]. Other continuous variables are uniform on scenario_support. Classes/sequences balanced by construction; every third case has one uniformly selected fault asset.",
+    "fresh_cleaned_cases": 4
+  },
+  "lifecycle_budget_CU": 1450000
+}

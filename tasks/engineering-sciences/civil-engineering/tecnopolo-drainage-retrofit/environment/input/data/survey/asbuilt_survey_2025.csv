@@ -1,0 +1,20 @@
+item,asset,attribute,design_value,surveyed_value,units,method,remarks
+1,J10,cover level,30.00,30.01,m a.s.l.,GNSS + level,within survey tolerance (+/-0.03 m); design value retained
+2,J10,invert level,28.12,28.12,m a.s.l.,dip from cover,agrees with design
+3,J11,cover level,30.00,29.90,m a.s.l.,GNSS + level,cover set lower during 2019 resurfacing of the outfall access road
+4,J11,invert level,27.90,27.90,m a.s.l.,dip from cover,agrees with design
+5,J15,cover level,30.00,30.02,m a.s.l.,GNSS + level,within survey tolerance; design value retained
+6,J15,invert level,28.34,28.34,m a.s.l.,dip from cover,agrees with design
+7,J23,cover level,30.00,29.99,m a.s.l.,GNSS + level,within survey tolerance; design value retained
+8,J23,invert level,28.16,28.16,m a.s.l.,dip from cover,agrees with design
+9,VPP,cover level,30.00,30.00,m a.s.l.,GNSS + level,agrees with design
+10,VPP,invert level,27.95,27.95,m a.s.l.,dip from cover,agrees with design
+11,J29,cover level,30.00,29.75,m a.s.l.,GNSS + level,chamber built at road level of the access road; not at design ground level
+12,J29,invert level,27.48,27.18,m a.s.l.,dip from cover,chamber half full of standing water and silt at the time of survey; staff did not reach a firm invert. Re-survey after jetting scheduled
+13,C9,internal diameter,500,400,mm,CCTV + measured at J10,pipe J9-J10 laid as DN400 (contractor substitution not recorded on drawings)
+14,C10,internal diameter,500,500,mm,measured at J10,agrees with design
+15,C11,internal diameter,600,600,mm,measured at J11,agrees with design
+16,C31,internal diameter,600,600,mm,measured at J29,agrees with design
+17,EDF4,roof drainage connection,J11,J10,-,dye test,roof downpipes of building EDF4 discharge to J10 (design drawings: J11)
+18,C26,internal diameter,500,500,mm,measured at VPP,agrees with design
+19,J5,cover level,30.00,30.40,m a.s.l.,GNSS,cover found under a temporary soil stockpile; level is the top of the stockpile. Re-survey after removal

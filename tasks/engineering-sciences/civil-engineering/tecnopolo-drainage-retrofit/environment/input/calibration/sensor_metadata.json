@@ -1,0 +1,49 @@
+{
+  "synthetic": true,
+  "sampling": "1 min through 12 h; 5 min thereafter through 36 h; then 30 min to simulation end",
+  "sensors": {
+    "J11_stage_m": {
+      "sd": 0.006,
+      "constant_bias_bound": 0.008,
+      "clock_offset_seconds": 0,
+      "unit": "m a.s.l."
+    },
+    "J29_stage_m": {
+      "sd": 0.006,
+      "constant_bias_bound": 0.008,
+      "clock_offset_seconds": 0,
+      "unit": "m a.s.l."
+    },
+    "pond_stage_m": {
+      "sd": 0.006,
+      "constant_bias_bound": 0.008,
+      "clock_offset_seconds": 0,
+      "unit": "m a.s.l."
+    },
+    "C11_flow_cms": {
+      "sd": 0.001,
+      "constant_bias_bound": 0.003,
+      "clock_offset_seconds": 0,
+      "unit": "m3/s"
+    },
+    "C32_flow_cms": {
+      "sd": 0.001,
+      "constant_bias_bound": 0.003,
+      "clock_offset_seconds": 60,
+      "unit": "m3/s"
+    },
+    "POND_OUT_flow_cms": {
+      "sd": 0.001,
+      "constant_bias_bound": 0.003,
+      "clock_offset_seconds": 0,
+      "unit": "m3/s"
+    }
+  },
+  "statuses": {
+    "valid": "use with stated uncertainty",
+    "missing": "no observation",
+    "maintenance": "instrument unavailable: do not fit value",
+    "below_detection": "true flow is in [0,0.0005] m3/s; value is censored"
+  },
+  "timestamps": "minute in CSV is logger minute. physical minute = minute - clock_offset_seconds/60. River and rain use physical time."
+}

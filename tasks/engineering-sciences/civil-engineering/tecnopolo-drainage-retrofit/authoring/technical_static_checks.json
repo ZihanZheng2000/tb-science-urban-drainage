@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "check": "nested_domain_field_task_path",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recognized_top_level_fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "namespace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "agent_budget_and_instruction_suffix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "three_explicit_artifacts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "separate_offline_verifier",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "public_agent_network",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "cpu_runner_limits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "agent_image_copies_public_input_only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "verifier_copy_and_artifact_parents",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "pinned_pytest_tooling",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no_runtime_dependency_installs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "canonical_model_matches_public",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "canonical_spec_matches_public",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no_runtime_debris_in_build_context",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "python_syntax",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "official_managed_readme_header",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "official_readme_sections",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "official_binary_reward_check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "original_benchmark_files_preserved",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "passed": 20,
+  "total": 20,
+  "publication_metadata": "Deliberately empty at user request; not part of executable benchmark validation.",
+  "not_run": [
+    "Official shell checks: bash not available in PATH",
+    "Docker/Harbor: docker and harbor not available",
+    "LLM rubric, model trials and AI-text detector: not run"
+  ]
+}

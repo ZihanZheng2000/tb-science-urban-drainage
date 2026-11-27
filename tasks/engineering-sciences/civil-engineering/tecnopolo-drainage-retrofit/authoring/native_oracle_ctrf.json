@@ -1,0 +1,65 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1795753796.9212112,
+            "stop": 1795753944.3491578
+        },
+        "tests": [
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_output_contract",
+                "status": "passed",
+                "duration": 0.004289800301194191,
+                "start": 1795753797.1493883,
+                "stop": 1795753797.1543462,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_rainfall_and_network_basis",
+                "status": "passed",
+                "duration": 0.09427300002425909,
+                "start": 1795753797.1543462,
+                "stop": 1795753797.2484055,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_lifecycle_budget",
+                "status": "passed",
+                "duration": 0.002606600522994995,
+                "start": 1795753797.2494032,
+                "stop": 1795753797.2513995,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_independent_prediction",
+                "status": "passed",
+                "duration": 15.287654800340533,
+                "start": 1795753797.2523997,
+                "stop": 1795753812.5397098,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_operating_cases",
+                "status": "passed",
+                "duration": 131.80803150031716,
+                "start": 1795753812.5406756,
+                "stop": 1795753944.3481605,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py"
+            }
+        ]
+    }
+}

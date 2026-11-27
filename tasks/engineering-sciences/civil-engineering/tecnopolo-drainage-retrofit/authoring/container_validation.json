@@ -1,0 +1,167 @@
+{
+  "harbor_version": "0.27.0",
+  "task_model_loaded": true,
+  "harbor_lint": {
+    "exit_code": 0,
+    "findings": []
+  },
+  "selected_official_checks": {
+    "passed": 20,
+    "total": 20,
+    "checks": [
+      {
+        "check": "check-allow-internet.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-allow-internet.sh.log"
+      },
+      {
+        "check": "check-binary-reward.py",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-binary-reward.py.log",
+        "execution": "Invoked the official Python implementation directly; the shell wrapper exec encounters the Windows Store python3 alias on this host."
+      },
+      {
+        "check": "check-canary.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-canary.sh.log"
+      },
+      {
+        "check": "check-dockerfile-platform.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-dockerfile-platform.sh.log"
+      },
+      {
+        "check": "check-dockerfile-references.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-dockerfile-references.sh.log"
+      },
+      {
+        "check": "check-dockerfile-sanity.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-dockerfile-sanity.sh.log"
+      },
+      {
+        "check": "check-instruction-suffix.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-instruction-suffix.sh.log"
+      },
+      {
+        "check": "check-nproc.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-nproc.sh.log"
+      },
+      {
+        "check": "check-pip-pinning.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-pip-pinning.sh.log"
+      },
+      {
+        "check": "check-pytest-version.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-pytest-version.sh.log"
+      },
+      {
+        "check": "check-separate-verifier.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-separate-verifier.sh.log"
+      },
+      {
+        "check": "check-task-absolute-path.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-task-absolute-path.sh.log"
+      },
+      {
+        "check": "check-task-resources.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-task-resources.sh.log"
+      },
+      {
+        "check": "check-task-slug.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-task-slug.sh.log"
+      },
+      {
+        "check": "check-task-structure.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-task-structure.sh.log"
+      },
+      {
+        "check": "check-task-timeout.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-task-timeout.sh.log"
+      },
+      {
+        "check": "check-test-sh-sanity.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-test-sh-sanity.sh.log"
+      },
+      {
+        "check": "check-trial-network-fetch.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-trial-network-fetch.sh.log"
+      },
+      {
+        "check": "check-verifier-resources.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-verifier-resources.sh.log"
+      },
+      {
+        "check": "check-verifier-tooling-baked.sh",
+        "passed": true,
+        "exit_code": 0,
+        "log": "check-verifier-tooling-baked.sh.log"
+      }
+    ],
+    "scope": "Selected official runtime/structure checks; publication identity and proposal checks excluded."
+  },
+  "workflow_lint": {
+    "tool": "actionlint",
+    "version": "v1.7.12",
+    "exit_code": 0
+  },
+  "bash_syntax_check": {
+    "exit_code": 0
+  },
+  "result_checker_unit_tests": {
+    "passed": 8,
+    "total": 8,
+    "evidence_type": "synthetic parser fixtures, not container runs"
+  },
+  "local_container_attempts": [
+    {
+      "agent": "oracle",
+      "status": "blocked before execution",
+      "reason": "Docker is not installed or not on PATH",
+      "exit_code": 1
+    },
+    {
+      "agent": "nop",
+      "status": "blocked before execution",
+      "reason": "Docker is not installed or not on PATH",
+      "exit_code": 1
+    }
+  ],
+  "container_execution_verified": false,
+  "ci_workflow": ".github/workflows/harbor-validation.yml",
+  "repository": "https://github.com/ZihanZheng2000/tb-science-urban-drainage",
+  "ci_status": "Awaiting first push; no successful CI run is claimed."
+}

@@ -1,0 +1,216 @@
+{
+  "validation_mode": "native Windows, not Docker/Harbor",
+  "python": "3.12.7",
+  "swmm_engine": 52004,
+  "swmm_toolkit": "0.17.0",
+  "pytest": "8.4.1",
+  "pytest_json_ctrf": "0.3.5",
+  "reference_solution": "Executed solution/solve.py against public environment/input only; all four events used; no private fixtures read",
+  "oracle_native_reward": 1,
+  "pytest_summary": {
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "pending": 0,
+    "other": 0,
+    "start": 1795753796.9212112,
+    "stop": 1795753944.3491578
+  },
+  "hydraulic_cases": {
+    "passed": 48,
+    "total": 48,
+    "design": 24,
+    "exceedance": 24
+  },
+  "prediction": {
+    "normalized_rmse": 0.0469225883759889,
+    "per_event_sensor_mse": [
+      0.004345794518611463,
+      0.0049159253429441685,
+      0.00019735020600392838,
+      0.0001876203559937109,
+      0.0021648570190809643,
+      1.8902643047353203e-05,
+      0.006784267523827184,
+      0.004453494230657514,
+      0.00015228285765434569,
+      0.00014646520494764634,
+      0.0030436193172643225,
+      1.017237879726132e-05
+    ],
+    "observation_scale_rmse": [
+      {
+        "event": 0,
+        "sensor": "J11_stage_m",
+        "rmse": 0.0016480660102472125,
+        "rmse_in_noise_sd": 0.2746776683745354
+      },
+      {
+        "event": 0,
+        "sensor": "J29_stage_m",
+        "rmse": 0.0017528415043409104,
+        "rmse_in_noise_sd": 0.29214025072348504
+      },
+      {
+        "event": 0,
+        "sensor": "pond_stage_m",
+        "rmse": 0.00035120347201082064,
+        "rmse_in_noise_sd": 0.05853391200180344
+      },
+      {
+        "event": 0,
+        "sensor": "C11_flow_cms",
+        "rmse": 0.00013697458012117098,
+        "rmse_in_noise_sd": 0.13697458012117097
+      },
+      {
+        "event": 0,
+        "sensor": "C32_flow_cms",
+        "rmse": 0.00046528024018659597,
+        "rmse_in_noise_sd": 0.465280240186596
+      },
+      {
+        "event": 0,
+        "sensor": "POND_OUT_flow_cms",
+        "rmse": 4.3477169925551966e-05,
+        "rmse_in_noise_sd": 0.043477169925551964
+      },
+      {
+        "event": 1,
+        "sensor": "J11_stage_m",
+        "rmse": 0.0020591666281270173,
+        "rmse_in_noise_sd": 0.34319443802116956
+      },
+      {
+        "event": 1,
+        "sensor": "J29_stage_m",
+        "rmse": 0.001668362638685291,
+        "rmse_in_noise_sd": 0.2780604397808818
+      },
+      {
+        "event": 1,
+        "sensor": "pond_stage_m",
+        "rmse": 0.00030850735166923667,
+        "rmse_in_noise_sd": 0.05141789194487278
+      },
+      {
+        "event": 1,
+        "sensor": "C11_flow_cms",
+        "rmse": 0.00012102280981188891,
+        "rmse_in_noise_sd": 0.12102280981188891
+      },
+      {
+        "event": 1,
+        "sensor": "C32_flow_cms",
+        "rmse": 0.0005516900685406909,
+        "rmse_in_noise_sd": 0.5516900685406909
+      },
+      {
+        "event": 1,
+        "sensor": "POND_OUT_flow_cms",
+        "rmse": 3.189416686051122e-05,
+        "rmse_in_noise_sd": 0.03189416686051122
+      }
+    ]
+  },
+  "costs": {
+    "capex_CU": 1226975.0,
+    "annual_maintenance_CU": 13000.0,
+    "maintenance_pv_CU": 193407.1731859217,
+    "lifecycle_CU": 1420382.1731859217,
+    "items": {
+      "chamber_J11": 390000.0,
+      "chamber_J10": 199200.0,
+      "chamber_J23": 195600.0,
+      "chamber_J29": 285375.0,
+      "pipe_C11": 12000,
+      "pipe_C31": 12000,
+      "pond_expansion": 114800,
+      "pond_control": 18000
+    }
+  },
+  "margins": {
+    "budget_CU": 29617.82681407826,
+    "design_min_pipe_freeboard_m": 0.4813434541034689,
+    "design_pipe_freeboard_margin_m": 0.18134345410346892,
+    "design_min_channel_freeboard_m": 0.18554938048541492,
+    "design_C11_max_cms": 0.03182645608348476,
+    "design_C32_max_cms": 0.019861250678633684,
+    "design_river_peak_max_cms": 0.047579391864938966,
+    "design_pond_depth_max_m": 1.1703924646777,
+    "design_pond_spill_max_m3": 0.0,
+    "design_24h_upstream_max_m3": 23.124423790959554,
+    "design_24h_pond_depth_max_m": 0.1669778674840927,
+    "exceedance_surface_proxy_max_m3": 8.307523069381716,
+    "exceedance_pond_spill_max_m3": 0.0,
+    "exceedance_river_peak_max_cms": 0.053700441929647964,
+    "max_abs_continuity_pct": 0.20529915392398834
+  },
+  "negative_controls": [
+    {
+      "trial": "nop",
+      "returncode": 1,
+      "native_reward": 0,
+      "elapsed_seconds": 1.119306200183928,
+      "expected_reward": 0
+    },
+    {
+      "trial": "duplicate_json",
+      "returncode": 1,
+      "native_reward": 0,
+      "elapsed_seconds": 1.316478000022471,
+      "expected_reward": 0
+    },
+    {
+      "trial": "budget_violation",
+      "returncode": 1,
+      "native_reward": 0,
+      "elapsed_seconds": 1.0915824994444847,
+      "expected_reward": 0
+    },
+    {
+      "trial": "incorrect_idf",
+      "returncode": 1,
+      "native_reward": 0,
+      "elapsed_seconds": 1.294760400429368,
+      "expected_reward": 0
+    },
+    {
+      "trial": "poor_calibration",
+      "native_reward": 0,
+      "normalized_rmse": 0.4707089481300837
+    },
+    {
+      "trial": "unmodified_existing_network",
+      "physical_check_failed": true,
+      "case": "HID_000",
+      "violation_count": 6
+    }
+  ],
+  "technical_static_checks": "author_materials/technical_static_checks.json",
+  "not_executed": [
+    "Docker builds",
+    "Harbor oracle/nop artifact-transfer trials",
+    "Official shell checks (bash unavailable in PATH)",
+    "Fresh Claude Code or Codex trials under 8-hour budget",
+    "LLM rubric review and failure trajectory analysis"
+  ],
+  "identity_fields": "Empty as requested; no credentials invented; needed only for publication review",
+  "original_files": "106 original public/host/submission files match recorded source hashes; original versions not overwritten",
+  "official_verifier_output_checks": [
+    {
+      "trial": "oracle",
+      "expected_reward": 1,
+      "passed": true,
+      "output": "OK 1 trial(s): binary reward, well-formed ctrf.json"
+    },
+    {
+      "trial": "nop",
+      "expected_reward": 0,
+      "passed": true,
+      "output": "OK 1 trial(s): binary reward, well-formed ctrf.json"
+    }
+  ],
+  "additional_validation_record": "authoring/container_validation.json"
+}

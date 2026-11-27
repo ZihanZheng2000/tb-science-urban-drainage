@@ -1,0 +1,10 @@
+{
+  "pipe_diameters": {},
+  "storage_units": {},
+  "pond_area_m2": 180,
+  "pond_outlet_diameter_m": 0.175,
+  "maintenance": {
+    "network_months": 12,
+    "pond_months": 12
+  }
+}

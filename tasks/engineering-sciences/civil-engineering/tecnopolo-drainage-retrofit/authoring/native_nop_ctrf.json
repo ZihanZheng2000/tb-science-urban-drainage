@@ -1,0 +1,70 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 0,
+            "failed": 5,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1795753822.445937,
+            "stop": 1795753822.892282
+        },
+        "tests": [
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_output_contract",
+                "status": "failed",
+                "duration": 0.0015872996300458908,
+                "start": 1795753822.730458,
+                "stop": 1795753822.8517892,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py",
+                "trace": "submission_dir = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts')\n\n    @pytest.fixture(scope=\"session\")\n    def outputs(submission_dir):\n        result = {}\n        for name in (\"calibration\", \"retrofit_design\", \"design_basis\"):\n            path = submission_dir / (name + \".json\")\n>           assert path.is_file() and not path.is_symlink(), f\"Missing regular artifact: {path.name}\"\nE           AssertionError: Missing regular artifact: calibration.json\nE           assert (False)\nE            +  where False = is_file()\nE            +    where is_file = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts/calibration.json').is_file\n\nswmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py:45: AssertionError"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_rainfall_and_network_basis",
+                "status": "failed",
+                "duration": 0.000499499961733818,
+                "start": 1795753822.8517892,
+                "stop": 1795753822.8606758,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py",
+                "trace": "submission_dir = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts')\n\n    @pytest.fixture(scope=\"session\")\n    def outputs(submission_dir):\n        result = {}\n        for name in (\"calibration\", \"retrofit_design\", \"design_basis\"):\n            path = submission_dir / (name + \".json\")\n>           assert path.is_file() and not path.is_symlink(), f\"Missing regular artifact: {path.name}\"\nE           AssertionError: Missing regular artifact: calibration.json\nE           assert (False)\nE            +  where False = is_file()\nE            +    where is_file = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts/calibration.json').is_file\n\nswmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py:45: AssertionError"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_lifecycle_budget",
+                "status": "failed",
+                "duration": 0.0006205001845955849,
+                "start": 1795753822.8606758,
+                "stop": 1795753822.8715043,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py",
+                "trace": "submission_dir = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts')\n\n    @pytest.fixture(scope=\"session\")\n    def outputs(submission_dir):\n        result = {}\n        for name in (\"calibration\", \"retrofit_design\", \"design_basis\"):\n            path = submission_dir / (name + \".json\")\n>           assert path.is_file() and not path.is_symlink(), f\"Missing regular artifact: {path.name}\"\nE           AssertionError: Missing regular artifact: calibration.json\nE           assert (False)\nE            +  where False = is_file()\nE            +    where is_file = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts/calibration.json').is_file\n\nswmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py:45: AssertionError"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_independent_prediction",
+                "status": "failed",
+                "duration": 0.0006426991894841194,
+                "start": 1795753822.872502,
+                "stop": 1795753822.8822718,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py",
+                "trace": "submission_dir = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts')\n\n    @pytest.fixture(scope=\"session\")\n    def outputs(submission_dir):\n        result = {}\n        for name in (\"calibration\", \"retrofit_design\", \"design_basis\"):\n            path = submission_dir / (name + \".json\")\n>           assert path.is_file() and not path.is_symlink(), f\"Missing regular artifact: {path.name}\"\nE           AssertionError: Missing regular artifact: calibration.json\nE           assert (False)\nE            +  where False = is_file()\nE            +    where is_file = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts/calibration.json').is_file\n\nswmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py:45: AssertionError"
+            },
+            {
+                "name": "swmm_v32_trial_codex/tb_science_swmm/tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit/tests/test_outputs.py::test_operating_cases",
+                "status": "failed",
+                "duration": 0.0006128009408712387,
+                "start": 1795753822.8822718,
+                "stop": 1795753822.892282,
+                "retries": 0,
+                "file_path": "swmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py",
+                "trace": "submission_dir = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts')\n\n    @pytest.fixture(scope=\"session\")\n    def outputs(submission_dir):\n        result = {}\n        for name in (\"calibration\", \"retrofit_design\", \"design_basis\"):\n            path = submission_dir / (name + \".json\")\n>           assert path.is_file() and not path.is_symlink(), f\"Missing regular artifact: {path.name}\"\nE           AssertionError: Missing regular artifact: calibration.json\nE           assert (False)\nE            +  where False = is_file()\nE            +    where is_file = WindowsPath('D:/Bench/swmm_v32_trial_codex/tb_science_swmm/author_materials/native_validation/nop/artifacts/calibration.json').is_file\n\nswmm_v32_trial_codex\\tb_science_swmm\\tasks\\engineering-sciences\\civil-engineering\\tecnopolo-drainage-retrofit\\tests\\test_outputs.py:45: AssertionError"
+            }
+        ]
+    }
+}

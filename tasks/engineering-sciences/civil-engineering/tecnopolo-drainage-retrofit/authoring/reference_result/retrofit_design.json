@@ -1,0 +1,18 @@
+{
+  "pipe_diameters": {
+    "C11": 0.125,
+    "C31": 0.1
+  },
+  "storage_units": {
+    "J11": 400,
+    "J10": 200,
+    "J23": 200,
+    "J29": 250
+  },
+  "pond_area_m2": 1000,
+  "pond_outlet_diameter_m": 0.15,
+  "maintenance": {
+    "network_months": 6,
+    "pond_months": 6
+  }
+}

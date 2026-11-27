@@ -1,0 +1,8 @@
+author_materials/
+validation/
+*_bundle.zip
+PACKAGE_MANIFEST.json
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

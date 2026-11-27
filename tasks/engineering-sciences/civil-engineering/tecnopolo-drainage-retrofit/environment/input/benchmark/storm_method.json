@@ -1,0 +1,28 @@
+{
+  "record_file": "data/climate/rain_1994_2013_5min.dat",
+  "record_years": [
+    1994,
+    2013
+  ],
+  "data_qc": "The design storms are derived from the gauge record after quality control. The record in data/climate/ is the raw logger export; the operator's station maintenance log is supplied with it.",
+  "annual_maxima": "for each calendar year 1994-2013 and each duration D in idf_durations_min: the maximum sum of D/5 consecutive 5-minute depths of the quality-controlled series. A calendar year enters the annual-maxima series only if at least 90 % of its 5-minute intervals hold valid data; in the years that are kept, intervals without valid data count as 0 mm.",
+  "idf_durations_min": [
+    5,
+    10,
+    15,
+    30,
+    45,
+    60,
+    90,
+    120,
+    180,
+    240,
+    360,
+    720,
+    1440
+  ],
+  "distribution": "Gumbel EV1, method of moments per duration: depth(T,D) = mean_D + K_T * std_D, std with ddof=1, K_T = -(sqrt(6)/pi) * (0.5772156649 + ln(ln(T/(T-1))))",
+  "interpolation": "depth between fitted durations: linear interpolation of ln(depth) against ln(duration), after forcing ln(depth) to be non-decreasing with duration (cumulative maximum)",
+  "hyetograph": "alternating block, 5-min blocks: block depths are the increments of depth(T, 5k) for k = 1..D/5; sorted descending; the largest block is placed at index round(peak_fraction*n - 0.5) (clipped to [0, n-1]); remaining blocks alternate right, left, right, ... around it, spilling to the free side when one side is full; each depth rounded to 0.001 mm",
+  "simulation": "Use the coupled as-built network and operating scenarios in engineering_contract.md and tools/hydraulics.py; simulate 48 hours beyond the last rain block, with recovery measured at 24 hours."
+}
