@@ -10,7 +10,7 @@ esac
 
 repository_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repository_root"
-task="tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit"
+task="tasks/earth-sciences/geosciences/tecnopolo-drainage-retrofit"
 evidence="$repository_root/validation/$agent"
 mkdir -p "$evidence"
 export HARBOR_TELEMETRY=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1

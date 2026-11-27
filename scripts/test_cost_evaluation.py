@@ -4,7 +4,7 @@ import importlib.util
 import json
 import unittest
 
-TASK = Path(__file__).resolve().parents[1] / "tasks/engineering-sciences/civil-engineering/tecnopolo-drainage-retrofit"
+TASK = Path(__file__).resolve().parents[1] / "tasks/earth-sciences/geosciences/tecnopolo-drainage-retrofit"
 SPEC = importlib.util.spec_from_file_location("cost_economics", TASK / "tests/economics.py")
 MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)

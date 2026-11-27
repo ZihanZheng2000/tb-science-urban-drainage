@@ -1,0 +1,17 @@
+{
+  "purpose": "Interview packaging; not an official submission",
+  "domain": "earth-sciences",
+  "field": "geosciences",
+  "subfield": "urban-hydrology-and-stormwater-management",
+  "author_metadata": "omitted at user request",
+  "official_task_path_check": {
+    "exit_code": 0
+  },
+  "harbor_lint_findings": [],
+  "unit_tests_passed": 15,
+  "pytest_collection_items": 5,
+  "managed_readme_header": "current",
+  "scientific_input_and_verifier_files_unchanged": true,
+  "model_inference_runs_started": 0,
+  "full_container_trial": "Earlier successful trial retained; this revision changes classification, metadata and documentation only."
+}

@@ -1,0 +1,17 @@
+{
+  "agent": "Claude Code",
+  "model_label": "Claude Opus 5.5",
+  "model_label_source": "User-reported; the original saved grader summary identifies the harness but does not record an exact model ID.",
+  "task_variant": "Earlier v4 two-phase investigation/calibration/design variant",
+  "current_contract_trial": false,
+  "hydraulic_cases_passed": 48,
+  "hydraulic_cases_total": 48,
+  "lifecycle_cost_CU": 1475426.8335208283,
+  "prediction_P": 0.9982682215878437,
+  "old_score": 97.58738363955175,
+  "old_pass_threshold": 98,
+  "old_engineering_pass": true,
+  "old_benchmark_pass": false,
+  "source_summary_sha256": "17ec635f1af9732d31a3e5e7fb8fe181522be816c8f7fe99aa8f6afed8eb3ffe",
+  "interpretation": "The prior design met all 48 hydraulic cases but missed the earlier overall score threshold because of lifecycle cost. This is cross-variant evidence, not a measured failure or success rate on the current single-stage Harbor task."
+}
