@@ -146,7 +146,7 @@ def stress_results(outputs, diagnostics_dir):
     # Processes, never threads: EPA SWMM has process-global solver state.
     payloads = [(outputs["retrofit_design"], truth, case,
                  diagnostics_dir / "stress" / case["id"]) for case in cases]
-    with ProcessPoolExecutor(max_workers=4) as pool:
+    with ProcessPoolExecutor(max_workers=2) as pool:
         result = list(pool.map(simulate_case, payloads))
     (diagnostics_dir / "stress_results.json").write_text(json.dumps(result, indent=2))
     return result

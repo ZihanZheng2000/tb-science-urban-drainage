@@ -182,7 +182,7 @@ def main():
     parser.add_argument("--project", type=Path, default=Path("/root/project"))
     parser.add_argument("--output", type=Path, default=Path("/root/results"))
     parser.add_argument("--work", type=Path, default=None)
-    parser.add_argument("--jobs", type=int, default=4)
+    parser.add_argument("--jobs", type=int, default=2)
     args = parser.parse_args()
     project, output = args.project.resolve(), args.output.resolve()
     work = args.work.resolve() if args.work else project / "runs/reference"

@@ -16,7 +16,7 @@ New-Item -ItemType Directory -Path $answerDirectory, $verifierDirectory -Force |
 if ($LASTEXITCODE -ne 0) {
     throw 'Install pytest==8.4.1 and pytest-json-ctrf==0.3.5 into the selected Python environment first.'
 }
-& $Python (Join-Path $taskDirectory 'solution\solve.py') --project (Join-Path $taskDirectory 'environment\input') --output $answerDirectory --work (Join-Path $runDirectory 'work') --jobs 4
+& $Python (Join-Path $taskDirectory 'solution\solve.py') --project (Join-Path $taskDirectory 'environment\input') --output $answerDirectory --work (Join-Path $runDirectory 'work') --jobs 2
 if ($LASTEXITCODE -ne 0) { throw 'Native reference solution failed.' }
 Set-Content -LiteralPath (Join-Path $verifierDirectory 'reward.txt') -Value '0' -Encoding ascii
 & $Python -m pytest (Join-Path $taskDirectory 'tests\test_outputs.py') --submission $answerDirectory --diagnostics $verifierDirectory --ctrf (Join-Path $verifierDirectory 'ctrf.json') -p no:cacheprovider -q

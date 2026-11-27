@@ -11,7 +11,7 @@ Infer a drainage model from imperfect observations and design a cost-constrained
 | **Tags** | `urban-drainage` `hydrology` `inverse-problems` `robust-design` `swmm` |
 | **Expert time estimate** | 8 hours |
 | **Agent budget** | 8 hours |
-| **Resources** | 4 CPUs · 8 GB RAM |
+| **Resources** | 2 CPUs · 6 GB RAM |
 
 See [instruction.md](instruction.md) for the task as the agent receives it, and [task.toml](task.toml) for the full environment and verifier configuration.
 
